@@ -47,3 +47,7 @@ Format JSON :
     ]
 }
 ```
+
+## Définir une taxonomie pour enrichir la données et faciliter son traitement
+
+
