@@ -63,7 +63,7 @@ L'approche de *Perspectiva* est la suivante :
 1. déterminer les poids relatifs entre les idées et leur relation.
 
 
-Pour champs d'annotation actuelle géré par *Perspectiva* sont :
+Les champs d'annotation actuels gérés par *Perspectiva* sont :
 * `idea`: l'idée extraite,
 * `semantic-cat`: la catégorie de l'idée au niveau sémantique, par exemple si elle est une proposition, une opinion ou une question.
 * `semantic-neg`: si l'idée est positive, négative ou neutre du point du vue sémantique, du sens.
