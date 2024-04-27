@@ -69,3 +69,4 @@ Ces fonctionnalités facilitent aussi le traitement entre l'information et la re
 ```{bibliography}
 :style: unsrtalpha
 ```
+
