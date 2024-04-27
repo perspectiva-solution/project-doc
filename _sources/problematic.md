@@ -64,3 +64,8 @@ Pour pallier à ces difficultés, le projet *Perspectiva* propose de s'appuyer s
 
 Ces fonctionnalités facilitent aussi le traitement entre l'information et la restitution des informations. Ces aspects sont décrits dans les sections suivantes.
 
+## Références
+
+```{bibliography}
+:style: unsrtalpha
+```
