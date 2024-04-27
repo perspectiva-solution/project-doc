@@ -1,0 +1,14 @@
+# In _config.yml
+title: Perspectiva - Development plan
+author: Cyril François
+# logo: logo.png
+# execute:
+# execute_notebooks: force
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year

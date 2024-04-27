@@ -1,0 +1,10 @@
+format: jb-book
+root: intro
+chapters:
+  - file: problematic
+  - file: dataset_building
+# - file: notebooks
+# - file: markdown-notebooks
+# - file: technology
+# sections:
+# - file: presentation_technology
