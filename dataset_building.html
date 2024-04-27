@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -320,9 +320,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-methodologie-creer-a-la-main-l-entree-et-la-sortie-desiree-pour-entrainer-et-evaluer">La méthodologie : créer à la main, l’entrée et la sortie désirée pour entraîner et évaluer.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-methodologie-creer-les-donnees-d-entree-et-de-sortie-pour-entrainer-et-evaluer">La méthodologie : créer les données d’entrée et de sortie pour entraîner et évaluer.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-format-de-donnees-base-sur-json">Le format de données basé sur JSON</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-une-taxonomie-pour-enrichir-la-donnees-et-faciliter-son-traitement">Définir une taxonomie pour enrichir la données et faciliter son traitement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determiner-comment-enrichir-la-donnees-pour-faciliter-son-traitement">Déterminer comment enrichir la données pour faciliter son traitement</a></li>
 </ul>
             </nav>
         </div>
@@ -346,8 +346,8 @@ document.write(`
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=7ell8KEbhJo">Ce qui se cache derrière le fonctionnement de ChatGPT</a> : comment fonctionnent les modèles du type GPT tels que ChatGPT ?</p></li>
 </ul>
 </div>
-<section id="la-methodologie-creer-a-la-main-l-entree-et-la-sortie-desiree-pour-entrainer-et-evaluer">
-<h2>La méthodologie : créer à la main, l’entrée et la sortie désirée pour entraîner et évaluer.<a class="headerlink" href="#la-methodologie-creer-a-la-main-l-entree-et-la-sortie-desiree-pour-entrainer-et-evaluer" title="Link to this heading">#</a></h2>
+<section id="la-methodologie-creer-les-donnees-d-entree-et-de-sortie-pour-entrainer-et-evaluer">
+<h2>La méthodologie : créer les données d’entrée et de sortie pour entraîner et évaluer.<a class="headerlink" href="#la-methodologie-creer-les-donnees-d-entree-et-de-sortie-pour-entrainer-et-evaluer" title="Link to this heading">#</a></h2>
 <p>Afin que la machine apprenne, il lui faut des exemples de ce qu’elle doit faire. Il faut donc que les praticiens, les ingénieurs et les développeurs de la solution soient au clair et s’accordent sur ce qu’ils souhaitent. Cette étape de réflexion est primordiale et peut être révisée au cours du projet. Mais il sera d’autant plus compliqué de créer une solution concrète qu’il y a de changement dans la définition de ce que la machine doit faire.</p>
 <p>Un jeu de données ne sert pas uniquement à entraîner des modèles, mais aussi à évaluer ces derniers. En effet, il permet d’évaluer les performances des modèles dans un environnement le plus proche de la réalité, à savoir traiter des données qu’il n’a jamais vues. Il faut donc aussi que les parties prenantes du développement se mettent au clair avec une méthode d’évaluation.</p>
 </section>
@@ -378,8 +378,58 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="definir-une-taxonomie-pour-enrichir-la-donnees-et-faciliter-son-traitement">
-<h2>Définir une taxonomie pour enrichir la données et faciliter son traitement<a class="headerlink" href="#definir-une-taxonomie-pour-enrichir-la-donnees-et-faciliter-son-traitement" title="Link to this heading">#</a></h2>
+<section id="determiner-comment-enrichir-la-donnees-pour-faciliter-son-traitement">
+<h2>Déterminer comment enrichir la données pour faciliter son traitement<a class="headerlink" href="#determiner-comment-enrichir-la-donnees-pour-faciliter-son-traitement" title="Link to this heading">#</a></h2>
+<p>La création de synthèse et de restitution nécessite plusieurs étape. Ces étapes sont majoritairement réalisées à la main par une ou plusieurs personnes :</p>
+<ol class="arabic simple">
+<li><p>récolter l’ensemble des contributions,</p></li>
+<li><p>extraire les idées, les opinions, les propositions, les questions, etc…</p></li>
+<li><p>créer une grille d’analyse et de catégories relatives aux thématiques partagées,</p></li>
+<li><p>annoter et catégoriser les éléments extraits,</p></li>
+<li><p>réaliser un ensemble de traitement statistique sur ces éléments,</p></li>
+<li><p>réaliser une synthèse en vue de la restitution.</p></li>
+</ol>
+<p>L’approche de <em>Perspectiva</em> est la suivante :</p>
+<ol class="arabic simple">
+<li><p>extraire les idées principales des contributions,</p></li>
+<li><p>déterminer les thématiques et les regroupements possibles en analysant l’ensemble des idées partagées par les contributions,</p></li>
+<li><p>venir annoter et catégoriser les idées selon les regroupements,</p></li>
+<li><p>déterminer les poids relatifs entre les idées et leur relation.</p></li>
+</ol>
+<p>Pour champs d’annotation actuelle géré par <em>Perspectiva</em> sont :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">idea</span></code>: l’idée extraite,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">semantic-cat</span></code>: la catégorie de l’idée au niveau sémantique, par exemple si elle est une proposition, une opinion ou une question.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">semantic-neg</span></code>: si l’idée est positive, négative ou neutre du point du vue sémantique, du sens.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">syntactic-neg</span></code> : si la syntaxe présente une négation (ne, ne … pas, ne … plus).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intensity</span></code> : l’intensité du propos ou du sens.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targets</span></code> : les sujets et objets de l’idée.</p></li>
+</ul>
+<p>A cette première analyse, peut venir s’ajouter d’autres dimensions selon les besoins du praticien.</p>
+<p>Exemple d’extraction partielle au format JSON :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;extract&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;content&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;idea&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Répartir les richesses de manière plus équitable&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;semantic-cat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;proposition&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;semantic-neg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;neutre&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;syntactic-neg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;positive&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;intensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;modéré&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;targets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;richesses&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;équité&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;idea&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Supprimer la taxe d&#39;habitation pour tous les Français&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;proposition&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;semantic-neg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;négatif&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;syntactic-neg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;positive&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;intensity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fort&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;targets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;taxe d&#39;habitation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Français&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -438,9 +488,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-methodologie-creer-a-la-main-l-entree-et-la-sortie-desiree-pour-entrainer-et-evaluer">La méthodologie : créer à la main, l’entrée et la sortie désirée pour entraîner et évaluer.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-methodologie-creer-les-donnees-d-entree-et-de-sortie-pour-entrainer-et-evaluer">La méthodologie : créer les données d’entrée et de sortie pour entraîner et évaluer.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-format-de-donnees-base-sur-json">Le format de données basé sur JSON</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-une-taxonomie-pour-enrichir-la-donnees-et-faciliter-son-traitement">Définir une taxonomie pour enrichir la données et faciliter son traitement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determiner-comment-enrichir-la-donnees-pour-faciliter-son-traitement">Déterminer comment enrichir la données pour faciliter son traitement</a></li>
 </ul>
   </nav></div>
 
