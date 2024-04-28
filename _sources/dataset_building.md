@@ -25,7 +25,7 @@ Concernant les modèles du langage, l'état de l'art de l'apprentissage comprend
 Dans la pratique, les praticiens utilisent des modèles déjà pré-entraînés par les *majors* du secteur, comme ChatGPT pour OpenAI, Mistral / Mixtral pour Mistral AI, Phi pour Microsoft ou Gemini pour Google. Ensuite, ils constituent un jeu de donnée comprenant à la fois la tâche à la réaliser et un jeu de donnée similaire mais légèrement dégradé qui fera l'objet de moins bon exemple pour la tâche d'alignement.
 
 ```{important}
-**La création d'un jeu de données de référence est une étape cruciale qui est difficilement automatisable**. Elle est chronophage dans ce qu'elle nécessite d'être précautionneux. Si la machine apprend de mauvais exemple, elle réalisera de mauvaises productions. Si l'on peut réaliser certaine étape du traitement de façon automatique à l'aide de solution comme ChatGPT d'OpenAI, il est nécessaire de vérifier chacune des productions et de corriger à la main si nécessaire.
+**La création d'un jeu de données de référence est une étape cruciale qui est difficilement automatisable**. Elle est chronophage dans ce qu'elle nécessite d'être précautionneux. Si la machine apprend de mauvais exemples, elle réalisera de mauvaises productions. Si l'on peut réaliser certaine étape du traitement de façon automatique à l'aide de solution comme ChatGPT d'OpenAI, il est nécessaire de vérifier chacune des productions et de corriger à la main si nécessaire.
 ```
 
 ## La création concrète du jeu de données
