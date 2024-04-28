@@ -133,7 +133,7 @@ Résultat correct :
 ```
 
 Résultat dégradé :
-```
+```json
 {
   "idea": "Répartir les richesses de manière plus équitable",
   "semantic-cat": "opinion",
@@ -143,5 +143,5 @@ Résultat dégradé :
   "targets": ["richesses", "égalité"],
 }
 ```
-La catégorie sémantique `opinion` est mauvaise, aussi le terme `égalité` est une mauvaise reformulation d'équitable, qui devrait être `équité`. Ces erreurs semblent possibles, mais elles impacteront nécessairement le traitement et l'analyse si elles ne sont pas corrigées. L'étape de préférence vise à sensibiliser le modèle à ce type d'erreur et à les prévenir.
+La catégorie sémantique `opinion` est mauvaise, aussi le terme `égalité` est une mauvaise reformulation d'équitable, qui devrait être `équité`. Ces erreurs semblent possibles. Elles impacteront nécessairement le traitement et l'analyse si elles ne sont pas corrigées. L'étape de préférence vise à sensibiliser le modèle à ce type d'erreur et à les prévenir.
 
