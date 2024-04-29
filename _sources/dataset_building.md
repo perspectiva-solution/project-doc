@@ -124,7 +124,6 @@ L'étape d'alignement de préférence permet d'obtenir de meilleures résultats.
 
 Une idée simple et efficace pour générer un jeu de donnée de préférence est de prendre le jeu de données de la tâche à réaliser et de le dégrader. Par exemple, il est possible de détériorer une extraction, d'introduire une erreur dans la ou les catégories d'enrichissement. Voici un exemple concret : 
 
-Résultat correct :
 `````{tab-set}
 ````{tab-item} Correct
 ```json
