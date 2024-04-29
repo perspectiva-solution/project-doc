@@ -405,10 +405,9 @@ document.write(`
 <p>La création de synthèse et de restitution nécessite plusieurs étape. Ces étapes sont majoritairement réalisées à la main par une ou plusieurs personnes :</p>
 <ol class="arabic simple">
 <li><p>récolter l’ensemble des contributions,</p></li>
-<li><p>extraire les idées, les opinions, les propositions, les questions, etc…</p></li>
-<li><p>créer une grille d’analyse et de catégories relatives aux thématiques partagées,</p></li>
-<li><p>annoter et catégoriser les éléments extraits,</p></li>
-<li><p>réaliser un ensemble de traitement statistique sur ces éléments,</p></li>
+<li><p>définir une grille d’analyse et de catégories relatives aux thématiques partagées ou à analyser,</p></li>
+<li><p>lire les contributions et les annoter selon la grille d’analyse,</p></li>
+<li><p>réaliser un ensemble de traitement statistique sur ces annotations,</p></li>
 <li><p>réaliser une synthèse en vue de la restitution.</p></li>
 </ol>
 <p>L’approche de <em>Perspectiva</em> est la suivante :</p>
@@ -416,7 +415,8 @@ document.write(`
 <li><p>extraire les idées principales des contributions,</p></li>
 <li><p>déterminer les thématiques et les regroupements possibles en analysant l’ensemble des idées partagées par les contributions,</p></li>
 <li><p>venir annoter et catégoriser les idées selon les regroupements,</p></li>
-<li><p>déterminer les poids relatifs entre les idées et leur relation.</p></li>
+<li><p>déterminer les poids relatifs entre les idées et leur relation,</p></li>
+<li><p>le tout de façon semi-automatique : proposition automatique corrigeable par un praticien.</p></li>
 </ol>
 <p>Les champs d’annotation actuels gérés par <em>Perspectiva</em> sont :</p>
 <ul class="simple">
@@ -492,7 +492,7 @@ Dégradé</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <p>Dans la version dégradée, la catégorie sémantique <code class="docutils literal notranslate"><span class="pre">opinion</span></code> est mauvaise, aussi le terme <code class="docutils literal notranslate"><span class="pre">égalité</span></code> est une mauvaise reformulation d’équitable, qui devrait être <code class="docutils literal notranslate"><span class="pre">équité</span></code>. Ces types d’erreur semblent possibles. Elles impacteront nécessairement le traitement et l’analyse si elles ne sont pas corrigées. L’étape de préférence vise à sensibiliser le modèle à ce type d’erreur et à les prévenir.</p>
-<p>Ce travail peut être réalisé de différente façon, plus ou moins manuel. Il est possible d’utiliser un outil de traitement de langage qui génère des réponses proches et similaires, et de sélectionner la meilleure et une moins bonne réponse. Ce travail peut être aussi fait à la main. Il peut être pertinent de le faire réaliser par la machine dans le sens que les variabilités et les erreurs qui seront introduites par cette dernière seront fidèles au fonctionnement de la machine. Introduire ces erreurs dans l’entraînement est le meilleur moyen de les prévenir. En effet, quel serait l’effet de sensibiliser une machine à une erreur qu’elle ne ferait pas ? Cependant, cette approche est robuste lorsque l’on utilise un modèle en particulier. Or, du fait de l’évolution importante des performances des modèles, quasi mensuel, il est très probable d’utiliser le jeu de données pour entraîner des modèles différents.</p>
+<p>Ce travail peut être réalisé de différente façon, plus ou moins manuel. Il est possible d’utiliser un outil de traitement de langage qui génère des réponses proches et similaires, et de sélectionner la meilleure et une moins bonne réponse. Ce travail peut être aussi fait à la main. Il peut être pertinent de le faire réaliser par la machine dans le sens que les variabilités et les erreurs qui seront introduites par cette dernière seront fidèles au fonctionnement de la machine. Introduire ces erreurs dans l’entraînement est le meilleur moyen de les prévenir. En effet, quel serait l’effet de sensibiliser une machine à une erreur qu’elle ne ferait pas ? Cependant, cette approche est robuste lorsque l’on utilise un modèle en particulier. Or, du fait de l’évolution permanente des performances des modèles, il est très probable d’utiliser le jeu de données pour entraîner des modèles différents.</p>
 </section>
 </section>
 </section>
