@@ -125,6 +125,8 @@ L'étape d'alignement de préférence permet d'obtenir de meilleures résultats.
 Une idée simple et efficace pour générer un jeu de donnée de préférence est de prendre le jeu de données de la tâche à réaliser et de le dégrader. Par exemple, il est possible de détériorer une extraction, d'introduire une erreur dans la ou les catégories d'enrichissement. Voici un exemple concret : 
 
 Résultat correct :
+`````{tab-set}
+````{tab-item} Correct
 ```json
 {
   "idea": "Répartir les richesses de manière plus équitable",
@@ -135,8 +137,9 @@ Résultat correct :
   "targets": ["richesses", "équité"],
 }
 ```
+````
 
-Résultat dégradé :
+````{tab-item} Dégradé
 ```json
 {
   "idea": "Répartir les richesses de manière plus équitable",
@@ -147,7 +150,10 @@ Résultat dégradé :
   "targets": ["richesses", "égalité"],
 }
 ```
-La catégorie sémantique `opinion` est mauvaise, aussi le terme `égalité` est une mauvaise reformulation d'équitable, qui devrait être `équité`. Ces erreurs semblent possibles. Elles impacteront nécessairement le traitement et l'analyse si elles ne sont pas corrigées. L'étape de préférence vise à sensibiliser le modèle à ce type d'erreur et à les prévenir.
+````
+`````
+
+Dans la version dégradée, la catégorie sémantique `opinion` est mauvaise, aussi le terme `égalité` est une mauvaise reformulation d'équitable, qui devrait être `équité`. Ces types d'erreur semblent possibles. Elles impacteront nécessairement le traitement et l'analyse si elles ne sont pas corrigées. L'étape de préférence vise à sensibiliser le modèle à ce type d'erreur et à les prévenir.
 
 Ce travail peut être réalisé de différente façon, plus ou moins manuel. Il est possible d'utiliser un outil de traitement de langage qui génère des réponses proches et similaires, et de sélectionner la meilleure et une moins bonne réponse. Ce travail peut être aussi fait à la main. Il peut être pertinent de le faire réaliser par la machine dans le sens que les variabilités et les erreurs qui seront introduites par cette dernière seront fidèles au fonctionnement de la machine. Introduire ces erreurs dans l’entraînement est le meilleur moyen de les prévenir. En effet, quel serait l'effet de sensibiliser une machine à une erreur qu'elle ne ferait pas ? Cependant, cette approche est robuste lorsque l'on utilise un modèle en particulier. Or, du fait de l'évolution importante des performances des modèles, quasi mensuel, il est très probable d'utiliser le jeu de données pour entraîner des modèles différents.  
 
