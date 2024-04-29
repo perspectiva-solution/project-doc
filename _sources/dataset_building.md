@@ -89,10 +89,6 @@ Les champs d'annotation actuels gérés par *Perspectiva* sont :
 
 A cette première analyse, peut venir s'ajouter d'autres dimensions selon les besoins du praticien.
 
-```{important}
-La taxonomie actuelle de *Perspectiva* n'est pas figée. Pour contribuer à son amélioration, n'hésitez pas à contacter l'équipe en charge du projet : [contact email](mailto:perspectiva-solution@gmail.com)
-```
-
 Exemple d'extraction partielle au format JSON :
 ``` json
 {
@@ -116,6 +112,10 @@ Exemple d'extraction partielle au format JSON :
     }
   ]
 }
+```
+
+```{important}
+La taxonomie actuelle de *Perspectiva* n'est pas figée. Pour contribuer à son amélioration, n'hésitez pas à contacter l'équipe en charge du projet : [contact email](mailto:perspectiva-solution@gmail.com)
 ```
 
 ### L'alignement de préférence à l'aide d'exemples dégradés
