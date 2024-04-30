@@ -28,6 +28,11 @@ Dans la pratique, les praticiens utilisent des modèles déjà pré-entraînés 
 **La création d'un jeu de données de référence est une étape cruciale qui est difficilement automatisable**. Elle est chronophage dans ce qu'elle nécessite d'être précautionneux. Si la machine apprend de mauvais exemples, elle réalisera de mauvaises productions. Si l'on peut réaliser certaine étape du traitement de façon automatique à l'aide de solution comme ChatGPT d'OpenAI, il est nécessaire de vérifier chacune des productions et de corriger à la main si nécessaire.
 ```
 
+:::{seealso}
+Il existe plusieurs algorithmes dont certains ne réalisent qu'une seule étape, comme l'algorithme *Supervised Fine-Tuning (SFT)* qui permet l'apprentissage d'une tâche, ou le *Direct Prefrence Optimization (DPO)* qui réalise l'alignement des préférences. Ces algorithmes sont l'objet d'une recherche actif. Les algorithmes et les pratiques ne cessent de s'améliorer. Pour plus d'information, et une revue à jour le avril 2024, lire les [huit billets dédiés sur le sujet d'Argilla (en anglais)](https://argilla.io/blog/mantisnlp-rlhf-part-1).
+Dans tous les cas, si l’algorithme change, les données et leurs conditions sont les mêmes : en quantité et de qualité.
+:::
+
 ## La création concrète du jeu de données
 
 Comme vue précédemment, la constitution d'un jeu de données de référence s'appuie sur un travail préliminaire et des choix. Parmi ces choix :
