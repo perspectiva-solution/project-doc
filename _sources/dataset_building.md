@@ -120,7 +120,7 @@ Exemple d'extraction partielle au format JSON :
 ```
 
 ```{important}
-La taxonomie actuelle de *Perspectiva* n'est pas figée. Pour contribuer à son amélioration, n'hésitez pas à contacter l'équipe en charge du projet. Vous pouvez regarder et créer un ticket sur Github à ce sujet : [ticket Github](https://github.com/perspectiva-solution/project-doc/issues)
+La taxonomie actuelle de *Perspectiva* n'est pas figée. Pour contribuer à son amélioration, n'hésitez pas à contacter l'équipe en charge du projet. Vous pouvez regarder et participer au ticket dédié à ce sujet sur Github : [ticket Github](https://github.com/perspectiva-solution/project-doc/issues/1)
 ```
 
 ### L'alignement de préférence à l'aide d'exemples dégradés
