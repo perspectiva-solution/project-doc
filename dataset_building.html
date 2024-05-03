@@ -320,11 +320,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-methodologie-creer-les-donnees-d-entree-et-de-sortie-pour-entrainer-et-evaluer">La méthodologie : créer les données d’entrée et de sortie pour entraîner et évaluer.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-creation-concrete-du-jeu-de-donnees">La création concrète du jeu de données</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#un-jeu-de-donnee-pour-entrainer-et-evaluer-les-modeles">Un jeu de donnée pour entraîner et évaluer les modèles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-constitution-du-jeu-de-donnees-une-tache-et-un-format-a-definir">La constitution du jeu de données : une tâche et un format à définir</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-format-structure-basee-sur-json">Le format : structure basée sur JSON</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tache-extraire-et-enrichir-les-contributions-pour-faciliter-leurs-analyses">La tâche : extraire et enrichir les contributions pour faciliter leurs analyses</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-alignement-de-preference-a-l-aide-d-exemples-degrades">L’alignement de préférence à l’aide d’exemples dégradés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tache-de-perspectiva-extraire-et-enrichir-les-contributions-pour-faciliter-leurs-analyses">La tâche de <em>Perspectiva</em> : extraire et enrichir les contributions pour faciliter leurs analyses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-alignement-de-preference-avec-des-exemples-degrades">L’alignement de préférence avec des exemples dégradés</a></li>
 </ul>
 </li>
 </ul>
@@ -340,9 +340,9 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="la-creation-du-jeu-de-donnees-de-reference">
 <h1>La création du jeu de données de référence<a class="headerlink" href="#la-creation-du-jeu-de-donnees-de-reference" title="Link to this heading">#</a></h1>
-<p>Les technologies du traitement automatique du langage (TAL) sont des algorithmes d’apprentissage machine, ou <em>machine learning</em> en anglais. Elles ont besoin d’être <em>entraînées</em> à réaliser une tâche. Plus exactement, ces technologies s’appuient sur des modèles qui stockent l’information et des algorithmes de paramétrage qui vont s’adapter à reproduire une tâche qui leur est présentée. Cette tâche doit leur être fournie via un certain nombre d’exemples variés. Ce nombre varie selon la complexité de la tâche. Plus la tâche est complexe plus le nombre d’exemple à fournir est important.</p>
+<p>Les technologies du traitement automatique du langage (TAL), ou <em>Natural Language Processing (NLP)</em>, sont des algorithmes d’apprentissage machine, ou <em>machine learning (ML)</em> en anglais. Elles ont besoin d’être <em>entraînées</em> à réaliser une tâche. Plus exactement, ces technologies s’appuient sur des modèles qui stockent l’information et des algorithmes de paramétrage qui vont s’adapter à reproduire une tâche qui leur est présentée. Cette tâche doit leur être fournie via un certain nombre d’exemples variés. Ce nombre varie selon la complexité de la tâche. Plus la tâche est complexe plus le nombre d’exemple à fournir est important.</p>
 <p>Dans le cadre du projet <em>Perspectiva</em>, la tâche est complexe. L’objectif est d’extraire les idées principales d’une contribution et de les évaluer. Cette tâche n’est pas toujours évidente même pour un humain qui excelle dans ce domaine. En effet, selon la syntaxe, le vocabulaire, la grammaire, la ponctuation, le ton ou le style, il est possible de faire des erreurs d’interprétation. De fait, le modèle a besoin d’un modèle pouvant stocker des règles complexes et d’un grand nombre de données pour se paramétrer correctement. Dans le cas du projet de <em>Perspectiva</em>, le plus d’exemple possible est le mieux.</p>
-<div class="admonition note">
+<div class="dropdown admonition note">
 <p class="admonition-title">Note</p>
 <p>Si vous êtes novice, David LOUAPRE a réalisé deux vidéos d’instruction qui résument très bien les principes. Vous pouvez y accéder via sa chaîne <a class="reference external" href="https://www.youtube.com/&#64;ScienceEtonnante">Science étonnante</a>.</p>
 <ul class="simple">
@@ -350,8 +350,8 @@ document.write(`
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=7ell8KEbhJo">Ce qui se cache derrière le fonctionnement de ChatGPT</a> : comment fonctionnent les modèles du type GPT tels que ChatGPT ?</p></li>
 </ul>
 </div>
-<section id="la-methodologie-creer-les-donnees-d-entree-et-de-sortie-pour-entrainer-et-evaluer">
-<h2>La méthodologie : créer les données d’entrée et de sortie pour entraîner et évaluer.<a class="headerlink" href="#la-methodologie-creer-les-donnees-d-entree-et-de-sortie-pour-entrainer-et-evaluer" title="Link to this heading">#</a></h2>
+<section id="un-jeu-de-donnee-pour-entrainer-et-evaluer-les-modeles">
+<h2>Un jeu de donnée pour entraîner et évaluer les modèles<a class="headerlink" href="#un-jeu-de-donnee-pour-entrainer-et-evaluer-les-modeles" title="Link to this heading">#</a></h2>
 <p>Afin que la machine apprenne, il lui faut des exemples de ce qu’elle doit faire. Il faut donc que les praticiens, les ingénieurs et les développeurs de la solution soient au clair et s’accordent sur ce qu’ils souhaitent que la machine fasse. Cette étape de réflexion est primordiale et peut être révisée au cours du projet. Mais il sera d’autant plus compliqué de créer une solution concrète qu’il y a de changement dans la définition de ce que la machine doit faire.</p>
 <p>Un jeu de données ne sert pas uniquement à entraîner des modèles, mais aussi à évaluer ces derniers. En effet, il permet d’évaluer les performances des modèles dans un environnement le plus proche de la réalité, à savoir traiter des données qu’il n’a jamais vues. Il faut donc aussi que les parties prenantes du développement se mettent au clair avec une méthode d’évaluation et ce qu’ils jugent comme étant un bon fonctionnement. Si l’on peut aisément s’imaginer comment évaluer un modèle qui manipule des chiffres, par exemple en calculant la différence entre le résultat du modèle avec la valeur attendue, pour une phrase ou un texte, l’évaluation est plus délicate. Cet aspect sera développé dans un avenir proche.</p>
 <p>Concernant les modèles du langage, l’état de l’art de l’apprentissage comprend trois étapes : le pré-entraînement, l’apprentissage de la tâche et l’alignement des préférences. Ces trois étapes nécessitent des données différentes :</p>
@@ -365,14 +365,14 @@ document.write(`
 <p class="admonition-title">Important</p>
 <p><strong>La création d’un jeu de données de référence est une étape cruciale qui est difficilement automatisable</strong>. Elle est chronophage dans ce qu’elle nécessite d’être précautionneux. Si la machine apprend de mauvais exemples, elle réalisera de mauvaises productions. Si l’on peut réaliser certaine étape du traitement de façon automatique à l’aide de solution comme ChatGPT d’OpenAI, il est nécessaire de vérifier chacune des productions et de corriger à la main si nécessaire.</p>
 </div>
-<div class="admonition seealso">
+<div class="dropdown admonition seealso">
 <p class="admonition-title">See also</p>
 <p>Il existe plusieurs algorithmes dont certains ne réalisent qu’une seule étape, comme l’algorithme <em>Supervised Fine-Tuning (SFT)</em> qui permet l’apprentissage d’une tâche, ou le <em>Direct Prefrence Optimization (DPO)</em> qui réalise l’alignement des préférences. Ces algorithmes sont l’objet d’une recherche actif. Les algorithmes et les pratiques ne cessent de s’améliorer. Pour plus d’information, et une revue à jour le avril 2024, lire les <a class="reference external" href="https://argilla.io/blog/mantisnlp-rlhf-part-1">huit billets dédiés sur le sujet d’Argilla (en anglais)</a>.
 Dans tous les cas, si l’algorithme change, les données et leurs conditions sont les mêmes : en quantité et de qualité.</p>
 </div>
 </section>
-<section id="la-creation-concrete-du-jeu-de-donnees">
-<h2>La création concrète du jeu de données<a class="headerlink" href="#la-creation-concrete-du-jeu-de-donnees" title="Link to this heading">#</a></h2>
+<section id="la-constitution-du-jeu-de-donnees-une-tache-et-un-format-a-definir">
+<h2>La constitution du jeu de données : une tâche et un format à définir<a class="headerlink" href="#la-constitution-du-jeu-de-donnees-une-tache-et-un-format-a-definir" title="Link to this heading">#</a></h2>
 <p>Comme vue précédemment, la constitution d’un jeu de données de référence s’appuie sur un travail préliminaire et des choix. Parmi ces choix :</p>
 <ul class="simple">
 <li><p>le format d’entrée et de sortie des données,</p></li>
@@ -405,8 +405,8 @@ Dans tous les cas, si l’algorithme change, les données et leurs conditions so
 </pre></div>
 </div>
 </section>
-<section id="la-tache-extraire-et-enrichir-les-contributions-pour-faciliter-leurs-analyses">
-<h3>La tâche : extraire et enrichir les contributions pour faciliter leurs analyses<a class="headerlink" href="#la-tache-extraire-et-enrichir-les-contributions-pour-faciliter-leurs-analyses" title="Link to this heading">#</a></h3>
+<section id="la-tache-de-perspectiva-extraire-et-enrichir-les-contributions-pour-faciliter-leurs-analyses">
+<h3>La tâche de <em>Perspectiva</em> : extraire et enrichir les contributions pour faciliter leurs analyses<a class="headerlink" href="#la-tache-de-perspectiva-extraire-et-enrichir-les-contributions-pour-faciliter-leurs-analyses" title="Link to this heading">#</a></h3>
 <p>La création de synthèse et de restitution nécessite plusieurs étape. Ces étapes sont majoritairement réalisées à la main par une ou plusieurs personnes :</p>
 <ol class="arabic simple">
 <li><p>récolter l’ensemble des contributions,</p></li>
@@ -462,8 +462,8 @@ Dans tous les cas, si l’algorithme change, les données et leurs conditions so
 <p>La taxonomie actuelle de <em>Perspectiva</em> n’est pas figée. Pour contribuer à son amélioration, n’hésitez pas à contacter l’équipe en charge du projet. Vous pouvez regarder et participer au ticket dédié à ce sujet sur Github : <a class="reference external" href="https://github.com/perspectiva-solution/project-doc/issues/1">ticket Github</a></p>
 </div>
 </section>
-<section id="l-alignement-de-preference-a-l-aide-d-exemples-degrades">
-<h3>L’alignement de préférence à l’aide d’exemples dégradés<a class="headerlink" href="#l-alignement-de-preference-a-l-aide-d-exemples-degrades" title="Link to this heading">#</a></h3>
+<section id="l-alignement-de-preference-avec-des-exemples-degrades">
+<h3>L’alignement de préférence avec des exemples dégradés<a class="headerlink" href="#l-alignement-de-preference-avec-des-exemples-degrades" title="Link to this heading">#</a></h3>
 <p>L’étape d’alignement de préférence permet d’obtenir de meilleures résultats. Il permet à la machine de déterminer ce qui est vraiment attendu et de produire le meilleur résultat dans les résultats les plus probables. D’ailleurs, il n’est pas rare que l’on apprenne, nous humain, aussi de cette façon.</p>
 <p>Une idée simple et efficace pour générer un jeu de donnée de préférence est de prendre le jeu de données de la tâche à réaliser et de le dégrader. Par exemple, il est possible de détériorer une extraction, d’introduire une erreur dans la ou les catégories d’enrichissement. Voici un exemple concret :</p>
 <div class="sd-tab-set docutils">
@@ -557,11 +557,11 @@ Dégradé</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-methodologie-creer-les-donnees-d-entree-et-de-sortie-pour-entrainer-et-evaluer">La méthodologie : créer les données d’entrée et de sortie pour entraîner et évaluer.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-creation-concrete-du-jeu-de-donnees">La création concrète du jeu de données</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#un-jeu-de-donnee-pour-entrainer-et-evaluer-les-modeles">Un jeu de donnée pour entraîner et évaluer les modèles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-constitution-du-jeu-de-donnees-une-tache-et-un-format-a-definir">La constitution du jeu de données : une tâche et un format à définir</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-format-structure-basee-sur-json">Le format : structure basée sur JSON</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tache-extraire-et-enrichir-les-contributions-pour-faciliter-leurs-analyses">La tâche : extraire et enrichir les contributions pour faciliter leurs analyses</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-alignement-de-preference-a-l-aide-d-exemples-degrades">L’alignement de préférence à l’aide d’exemples dégradés</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tache-de-perspectiva-extraire-et-enrichir-les-contributions-pour-faciliter-leurs-analyses">La tâche de <em>Perspectiva</em> : extraire et enrichir les contributions pour faciliter leurs analyses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-alignement-de-preference-avec-des-exemples-degrades">L’alignement de préférence avec des exemples dégradés</a></li>
 </ul>
 </li>
 </ul>
